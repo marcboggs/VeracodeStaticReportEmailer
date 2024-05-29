@@ -21,7 +21,7 @@ API_BASE = "https://api.veracode.com/appsec/"
 HEADERS = {"User-Agent": "Weekly Flaw Checking"}
 
 #email the report is coming from
-SENDER_EMAIL = 'example.user@email.com'
+SENDER_EMAIL = 'example.user1@email.com,example.user2@email.com'
 
 # Email list for team (comma separated list)
 RECEIVER_EMAIL = 'example.user1@email.com,example.user2@email.com,example.user3@email.com'
@@ -57,7 +57,7 @@ print("branch is {}".format(branch))
 print("smtp server is {}".format(smtp_server))
 print("msg is {}".format(msg))
 
-SUBJECT = 'ICB Veracode Flaw ' + frep + ' Report based on ' +  branch
+SUBJECT = 'Veracode Flaw ' + frep + ' Report based on ' +  branch
 MAILTEMPSTART = """
 <!DOCTYPE html>
 <html>
@@ -115,7 +115,7 @@ MAILTEMPMIDDLE="""
     This is an auto generated report for Veracode application scan Status.<br>
     The last update time of the application scan is <span style='color: red'>{}</span>.<br>
     The number of remaining flaws not mitigated is <span style='color: red'>{}</span>.<br>
-    The following is the Infor Clinical Bridge Veracode flaw list that is violating the policy.<br>
+    The following is the {APP_PROFILE_NAME} Veracode flaw list that is violating the policy.<br>
     Please pay attention to the <span style='color: red'>red marked lines</span>. Their grace periods expire in less 30 days.<br><br>
     <table>
       <thead>
