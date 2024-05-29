@@ -21,7 +21,7 @@ API_BASE = "https://api.veracode.com/appsec/"
 HEADERS = {"User-Agent": "Weekly Flaw Checking"}
 
 #email the report is coming from
-SENDER_EMAIL = 'example.user1@email.com,example.user2@email.com'
+SENDER_EMAIL = 'example.user@email.com'
 
 # Email list for team (comma separated list)
 RECEIVER_EMAIL = 'example.user1@email.com,example.user2@email.com,example.user3@email.com'
